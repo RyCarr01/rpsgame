@@ -1,21 +1,19 @@
+let computerChoice;
+let humanChoice;
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
-    return Math.random()
+    let random = Math.random();
+    computerChoice = 
+        (random < 1/3) ? "rock":
+        (random < 2/3) ? "paper":
+        "scissors";
+    return computerChoice;
 }
 
-let x = getComputerChoice()
-
-console.log(x)
-
-if (x <= 0.33) {
-    console.log("x")
-
-}   else if (x >= 0.331 && x <= 0.77) {
-    console.log("y")
-
-}   else if (x >= 0.771) {
-    console.log("z")
-
-}   else {
-    console.log("shouldnt happen")
-
+function getHumanChoice() {
+    humanChoice = prompt("What is your selection: rock, paper, or scissors?");
+    return humanChoice;
 }
+console.log(getHumanChoice())
